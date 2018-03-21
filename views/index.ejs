@@ -1,0 +1,72 @@
+<link href="style.css" rel="stylesheet">
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i<contacts.length; i++) {%>
+                <tr>
+                    <td><span><%= i + 1 %></span></td>
+                    <td><span><%= contacts[i].firstName %></span></td>
+                    <td><span><%= contacts[i].lastName %></span></td>
+                    <td><span><%= contacts[i].email %></span></td>
+                    <td><span><%= contacts[i].subject %></span></td>
+                    <td><span><%= contacts[i].message %></span></td>
+                </tr>               
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<br>
+<br>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <form method="post" action="/save" class="well span8">
+        <div class="row">
+            <div class="span3">
+                <label>First Name</label>
+                <input name="firstName" class="span3" placeholder="Your First Name" type="text">
+                <label>Last Name</label>
+                <input class="span3" name="lastName" placeholder="Your Last Name" type="text">
+                <label>Email Address</label>
+                <input class="span3" placeholder="Your email address" name="email" type="text">
+                <label>Subject</label>
+                <select class="span3" id="subject" name="subject">
+                    <option selected value="na">
+                        Choose One:
+                    </option>
+
+                    <option value="service">
+                        General Customer Service
+                    </option>
+
+                    <option value="suggestions">
+                        Suggestions
+                    </option>
+
+                    <option value="product">
+                        Product Support
+                    </option>
+                </select>
+            </div>
+
+            <div class="span5">
+                <label>Message</label>
+                <textarea class="input-xlarge span5" id="message" name="message" rows="10">
+    </textarea>
+            </div>
+            <button class="btn btn-primary pull-right" type="submit">Send</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "contactinfoshowcase",
+  "version": "1.0.0",
+  "description": "An app that saves and retrievs data",
+  "main": "app.js",
+  "scripts": {
+    "test": "node, mongoose, npm, contactinfoshowcase"
+  },
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.11"
+  }
+}
